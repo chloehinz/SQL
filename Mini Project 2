@@ -1,0 +1,35 @@
+INSERT INTO patients (name, age, gender) VALUES ('John Doe', 30, 'Male'); 
+INSERT INTO patients (name, age, gender) VALUES ('Jane Smith', 25, 'Female'); 
+INSERT INTO patients (name, age, gender) VALUES ('Emily Davis', 40, 'Female'); 
+INSERT INTO patients (name, age, gender) VALUES ('Michael Brown', 50, 'Male'); 
+INSERT INTO patients (name, age, gender) VALUES ('Sarah Wilson', 35, 'Female'); 
+
+INSERT INTO visits (patient_id, visit_date, reason) VALUES (1, '2024-01-10', 'Routine check-up'); 
+INSERT INTO visits (patient_id, visit_date, reason) VALUES (2, '2024-01-15', 'Flu symptoms'); 
+INSERT INTO visits (patient_id, visit_date, reason) VALUES (3, '2024-01-20', 'Annual physical'); 
+INSERT INTO visits (patient_id, visit_date, reason) VALUES (4, '2024-01-25', 'Chest pain'); 
+INSERT INTO visits (patient_id, visit_date, reason) VALUES (5, '2024-01-30', 'Headache'); 
+INSERT INTO medications (name, dosage) VALUES ('Aspirin', '100mg'); 
+INSERT INTO medications (name, dosage) VALUES ('Ibuprofen', '200mg'); 
+INSERT INTO medications (name, dosage) VALUES ('Amoxicillin', '500mg'); 
+INSERT INTO medications (name, dosage) VALUES ('Metformin', '1000mg'); 
+INSERT INTO medications (name, dosage) VALUES ('Lisinopril', '10mg'); 
+
+INSERT INTO prescriptions (patient_id, medication_id, start_date, end_date) VALUES (1, 1, '2024-02-01', '2024-02-10'); 
+INSERT INTO prescriptions (patient_id, medication_id, start_date, end_date) VALUES (2, 2, '2024-02-05', '2024-02-15'); 
+INSERT INTO prescriptions (patient_id, medication_id, start_date, end_date) VALUES (3, 3, '2024-02-10', '2024-02-20'); 
+INSERT INTO prescriptions (patient_id, medication_id, start_date, end_date) VALUES (4, 4, '2024-02-15', '2024-02-25'); 
+INSERT INTO prescriptions (patient_id, medication_id, start_date, end_date) VALUES (5, 5, '2024-02-20', '2024-03-01'); 
+
+INSERT INTO appointments (patient_id, appointment_date, doctor) VALUES (1, '2024-03-01', 'Dr. Smith'); 
+INSERT INTO appointments (patient_id, appointment_date, doctor) VALUES (2, '2024-03-05', 'Dr. Johnson'); 
+INSERT INTO appointments (patient_id, appointment_date, doctor) VALUES (3, '2024-03-10', 'Dr. Lee'); 
+INSERT INTO appointments (patient_id, appointment_date, doctor) VALUES (4, '2024-03-15', 'Dr. Brown'); 
+INSERT INTO appointments (patient_id, appointment_date, doctor) VALUES (5, '2024-03-20', 'Dr. Williams'); 
+
+SELECT * FROM patients ORDER BY age;
+SELECT * FROM patients WHERE name = 'John Doe';
+SELECT * FROM medications; 
+SELECT dosage FROM medications WHERE name = 'Metformin'; 
+SELECT * FROM appointments;
+SELECT appointment_date FROM appointments WHERE doctor = 'Dr. Williams'; 
